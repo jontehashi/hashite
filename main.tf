@@ -1,7 +1,7 @@
-# import {
-#   to = aws_vpc.main
-#   id = "vpc-05709341c9dbaafc5"
-# }
+ import {
+   to = aws_vpc.main
+   id = "vpc-05709341c9dbaafc5"
+}
 
 resource "aws_vpc" "main" {
   #the vpc is imported in. 
@@ -13,7 +13,7 @@ resource "aws_instance" "jon_linux_box" {
   vpc_security_group_ids = [ aws_security_group.allows_linux_traffic.id ]
 
   tags = {
-    Name = "Jon's linux 23"
+    Name = "Jon's linux"
   }
 }
 
